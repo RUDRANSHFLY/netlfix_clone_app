@@ -1,6 +1,10 @@
 import { Tabs } from "expo-router";
 import React from "react";
-import { StyleSheet } from "react-native";
+import { ImageBackground, StyleSheet } from "react-native";
+
+
+//? Icons
+import AntDesign from '@expo/vector-icons/AntDesign';
 
 const Layout = () => {
   return (
@@ -11,7 +15,15 @@ const Layout = () => {
       />
       <Tabs.Screen
         name="search"
-        options={{ title: "Search", headerShown: false }}
+        options={{ 
+          title: "Search", 
+          headerShown: false,
+          tabBarIcon : ({ focused }) => (
+            <>
+              <ImageBackground />
+            </>
+          ) 
+        }}
       />
       <Tabs.Screen
         name="saved"
