@@ -1,15 +1,11 @@
 import Header from "@/components/header";
 import MovieCard from "@/components/movie-card";
-import SearchBar from "@/components/search-bar";
-import { icons } from "@/constants/icons";
-import { images } from "@/constants/images";
 import useFetch from "@/hooks/useFetch";
 import { fetchMovies } from "@/services/api";
-import { useRouter } from "expo-router";
-import { View, Image, ActivityIndicator, Text, FlatList } from "react-native";
+import { View, ActivityIndicator, Text, FlatList } from "react-native";
 
 export default function Index() {
-  const router = useRouter();
+
   const {
     data: movies,
     loading: moviesLoading,
@@ -26,7 +22,7 @@ export default function Index() {
           className="mt-10 self-center"
         />
       ) : moviesError ? (
-        <Text className="text-white">Error : ${moviesError?.message}</Text>
+        <Text className="text-white">Error : {moviesError?.message}</Text>
       ) : (
         <View className="flex-1">
           <>
