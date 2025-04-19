@@ -1,6 +1,6 @@
 import { Tabs } from "expo-router";
 import React from "react";
-import { StyleSheet } from "react-native";
+
 
 //? Icons
 
@@ -83,6 +83,6 @@ const Layout = () => {
   );
 };
 
-const styles = StyleSheet.create({});
+
 
 export default Layout;

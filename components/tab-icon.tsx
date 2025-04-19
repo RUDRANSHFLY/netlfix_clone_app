@@ -1,6 +1,6 @@
 import { images } from "@/constants/images";
 import React from "react";
-import { StyleSheet, ImageBackground, Image, Text, View } from "react-native";
+import { ImageBackground, Image, Text, View } from "react-native";
 
 interface TabIconProps {
   icon: any;
@@ -32,6 +32,6 @@ const TabIcon = ({ icon, title, focused }: TabIconProps) => {
   )
 };
 
-const styles = StyleSheet.create({});
+
 
 export default TabIcon;
