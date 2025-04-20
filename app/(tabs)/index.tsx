@@ -2,9 +2,17 @@ import Header from "@/components/header";
 import MovieCard from "@/components/movie-card";
 import useFetch from "@/hooks/useFetch";
 import { fetchMovies } from "@/services/api";
+import { getTrendingMovies } from "@/services/appwrite";
 import { View, ActivityIndicator, Text, FlatList } from "react-native";
 
 export default function Index() {
+
+  const {
+
+    loading  : trendingMoviesLoading,
+    error : trendingMoviesError,
+
+  } = useFetch(getTrendingMovies)
 
   const {
     data: movies,
@@ -15,17 +23,18 @@ export default function Index() {
   return (
     <View className="flex-1 bg-primary px-5">
   
-      {moviesLoading ? (
+      {moviesLoading || trendingMoviesLoading ? (
         <ActivityIndicator
           size={"large"}
           color={"#0000ff"}
           className="mt-10 self-center"
         />
-      ) : moviesError ? (
+      ) : moviesError || trendingMoviesError ? (
         <Text className="text-white">Error : {moviesError?.message}</Text>
       ) : (
         <View className="flex-1">
           <>
+     
             <FlatList
               ListHeaderComponent={<Header />}
               className="mt-2 pb-32"

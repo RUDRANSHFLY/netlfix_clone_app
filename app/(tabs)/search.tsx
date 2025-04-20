@@ -2,6 +2,7 @@ import Header from "@/components/header";
 import MovieCard from "@/components/movie-card";
 import useFetch from "@/hooks/useFetch";
 import { fetchMovies } from "@/services/api";
+import { updateSearchCount } from "@/services/appwrite";
 import { useState, useEffect } from "react";
 import { View, FlatList, ActivityIndicator, Text } from "react-native";
 
@@ -17,6 +18,9 @@ const Search = () => {
   } = useFetch(() => fetchMovies({ query: searchQuery ?? " " }));
 
   useEffect(() => {
+    
+    
+
     const funcMov = async () => {
       if (searchQuery?.trim()) {
         await loadMovies();
@@ -28,6 +32,20 @@ const Search = () => {
     funcMov();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchQuery]);
+
+
+    useEffect(() => {
+
+      const updateSearch = async () => {
+
+        if(movies?.length > 0 && movies?.[0]){
+          updateSearchCount(searchQuery?? "",movies?.[0]);
+        }
+      }
+    
+      updateSearch()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [movies])
 
   return (
     <View className="flex-1 bg-primary">
