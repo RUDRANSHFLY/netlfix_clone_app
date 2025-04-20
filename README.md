@@ -4,13 +4,13 @@ This project is a Netflix Clone that features a home page displaying trending an
 
 ## Features
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+<div style="display: flex; flex-wrap: wrap; gap: 50px; justify-content: center;">
    <img src="assets/images/screenshots/s1.jpg" alt="Screenshot 1" style="width: 23%; height: auto;">
    <img src="assets/images/screenshots/s2.jpg" alt="Screenshot 2" style="width: 23%; height: auto;">
    <img src="assets/images/screenshots/s3.jpg" alt="Screenshot 3" style="width: 23%; height: auto;">
    <img src="assets/images/screenshots/s4.jpg" alt="Screenshot 4" style="width: 23%; height: auto;">
 </div>
-<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 20px;">
+<div style="display: flex; flex-wrap: wrap; gap: 50px; justify-content: center; margin-top: 20px;">
    <img src="assets/images/screenshots/s5.jpg" alt="Screenshot 5" style="width: 23%; height: auto;">
    <img src="assets/images/screenshots/s6.jpg" alt="Screenshot 6" style="width: 23%; height: auto;">
    <img src="assets/images/screenshots/s7.jpg" alt="Screenshot 7" style="width: 23%; height: auto;">
