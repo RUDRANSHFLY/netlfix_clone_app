@@ -7,7 +7,6 @@ import SearchBar from "./search-bar";
 import { fetchMovies } from "@/services/api";
 import useFetch from "@/hooks/useFetch";
 import { getTrendingMovies } from "@/services/appwrite";
-import MovieCard from "./movie-card";
 import TrendingCard from "./trending-card";
 
 interface HeaderProps {
